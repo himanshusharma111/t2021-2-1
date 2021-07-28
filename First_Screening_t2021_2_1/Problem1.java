@@ -1,75 +1,73 @@
-/* Problem-1: Create a small calculator which performs operations such as Addition, Subtraction, Multiplication and Division using class.
-Calculator inputs :> ‘a’, ‘b’ and ‘type of operation’
-Datatype :> ‘a’ = double, ‘b’ = double, ‘type of operation’ = string */
-
 package First_Screening_t2021_2_1;
 
 import java.util.Scanner;
 
 public class Problem1 {
 
-	public void addition(double a, String addition, double b) {
-
-		if (addition.equals("+")) {
-			double value = a + b;
-			System.out.println(value);
-		}
-
+	public double addition(double firstDigit, double secondDigit) {
+		double value = firstDigit + secondDigit;	
+		return value;
 	}
 
-	public void subtraction(double a, String subtraction, double b) {
-		if (subtraction.equals("-")) {
-			double value = a - b;
-			System.out.println(value);
-		}
+	public double subtraction(double firstDigit, double secondDigit) {
+		double value = firstDigit - secondDigit;	
+		return value;
 	}
 
-	public void multiplication(double a, String multiplication, double b) {
-		if (multiplication.equals("*")) {
-			double value = a * b;
-			System.out.println(value);
-		}
+	public double multiplication(double firstDigit, double secondDigit) {
+		double value = firstDigit * secondDigit;	
+		return value;
 	}
 
-	public void divide(double a, String divide, double b) {
-		if (divide.equals("/")) {
-			double value = a / b;
-			System.out.println(value);
-		}
+	public double divide(double firstDigit, double secondDigit) {
+		double value = firstDigit / secondDigit;	
+		return value;
 	}
 
 	public static void main(String[] args) {
-
-		int value = 0;
-
+	
+		double firstDigit;
+		double secondDigit;
+		String operation;
+		Problem1 p1 = new Problem1();
+		
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Enter the first digit : ");
-		double a = sc.nextDouble();
+		firstDigit = sc.nextDouble();
 
 		System.out.println("Enter the opration you want to perform (+,-,*,/) : ");
-		String operation = sc.next();
-
+		operation = sc.next();
+		operation = operation.trim();
+		
 		System.out.println("Enter the second digit : ");
-		double b = sc.nextDouble();
+		secondDigit = sc.nextDouble();
 
-		Problem1 p1 = new Problem1();
 
-		if (operation.equals("+")) {
-			p1.addition(a, operation, b);
-		} 
-		else if (operation.equals("-")) {
-			p1.subtraction(a, operation, b);
-		} 
-		else if (operation.equals("*")) {
-			p1.multiplication(a, operation, b);
-		} 
-		else if (operation.equals("/")) {
-			p1.divide(a, operation, b);
-		} 
-		else {
-			System.out.println("Please enter the valid operation from given list of four operators (+,-,*,/) ... :)");
-		}
+		switch (operation) {
+		case "+":
+			double res = p1.addition(firstDigit, secondDigit);
+			System.out.println(res);
+			break;
+			
+		case "-":
+			double result = p1.subtraction(firstDigit, secondDigit);
+			System.out.println(result);
+			break;
+			
+		case "*":
+			double result1 = p1.multiplication(firstDigit, secondDigit);
+			System.out.println(result1);
+			break;
+			
+		case "/":
+			double result11 = p1.divide(firstDigit, secondDigit);
+			System.out.println(result11);
+			break;
+		
+		default:
+			System.out.println("Please enter correct operation");
+			break;
+		}	
 	}
-
 }
