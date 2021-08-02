@@ -24,6 +24,7 @@ public class Problem6 {
 				ch = chline[i];
 			  	ascii = (int)ch; 
 			  	
+				//if user enters Z then ascii value should be A
 			  	if (ascii == 90) 
 			  	{
 			  		ascii = 65-1;
