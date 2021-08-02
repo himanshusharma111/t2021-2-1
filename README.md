@@ -56,7 +56,7 @@ Output: (examples)
 #### Solution : Problem4.java
 ---
 
-#### Problem-5: input = ABDEFoutput = GFECB or input = XTD output = EUY 
+#### Problem-5: input = ABDEF output = GFECB or input = XTD output = EUY 
 #### Solution Problem5.java 
 ---
   
