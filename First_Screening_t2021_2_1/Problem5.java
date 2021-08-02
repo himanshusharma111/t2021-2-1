@@ -7,7 +7,9 @@ import java.util.Scanner;
 
 public class Problem6 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
+		
 		char ch = 0; 
 		char nextchar = 0;
 		int ascii = 0;
@@ -17,10 +19,10 @@ public class Problem6 {
 		List list = new ArrayList<>();
 		
 		Scanner sc = new Scanner(System.in); 
-		
 		char[] chline = sc.next().toCharArray();  
-		for(int i=0; i<chline.length; i++)
-		{		
+		
+			for(int i=0; i<chline.length; i++)
+			{		
 				ch = chline[i];
 			  	ascii = (int)ch; 
 			  	
@@ -30,7 +32,7 @@ public class Problem6 {
 			  		ascii = 65-1;
 				}
 			  	
-				ascii++ ;    
+				 ascii++ ;    
 				 nextchar = (char)ascii;
 				 revchar = String.valueOf(nextchar); 
 				 rev = revchar.toCharArray();
@@ -39,11 +41,11 @@ public class Problem6 {
 				 { 
 					 list.add(c);
 				 }		
-		}
+			}
+		
 		for(int l=list.size()-1; l>=0; l--)
 		{
 			System.out.print(list.get(l));
 		}	
 	}
-
 }
